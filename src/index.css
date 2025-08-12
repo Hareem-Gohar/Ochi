@@ -1,0 +1,52 @@
+@import "tailwindcss";
+
+@font-face {
+  font-family: "Atlassian Sans";
+  src: url("../src/Fonts/AtlassianSans-latin.woff2") format("woff2");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Founders Grotesk";
+  src: url("../src/Fonts/FoundersGrotesk-Semibold.woff2") format("woff2"),
+    url("../src/Fonts/FoundersGrotesk-Semibold.woff") format("woff");
+  font-weight: 600;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Neue Montreal";
+  src: url("../src/Fonts/NeueMontreal-Regular.woff2") format("woff2"),
+    url("../src/Fonts/NeueMontreal-Regular.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Icomoon";
+  src: url("../src/Fonts/icomoon.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@theme {
+  --font-atlassian: "Atlassian Sans", "sans-serif";
+  --font-grotesk: "Founders Grotesk", "sans-serif";
+  --font-montreal: "Neue Montreal", "sans-serif";
+  --font-icon: "Icomoon";
+}
+
+.indicator-text{
+    animation: scroll-down 3s infinite backwards;
+}
+
+@keyframes  scroll-down {
+    0% {
+        transform: translateY(-150%);
+    }
+    30%, 70% {
+        transform: translateY(0);
+    }
+    100% {
+        transform: translateY(150%);
+    }
+}
+
