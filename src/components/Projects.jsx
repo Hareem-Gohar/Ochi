@@ -1,26 +1,39 @@
-import React from 'react'
+import { motion, useAnimate, useAnimation } from 'framer-motion'
+import React, { useState } from 'react'
 
 const Projects = () => {
+    const cards = [useAnimation(), useAnimation()]
+    const handleHover = (index) => {
+        cards[index].start({ y: "0" })
+    }
+    const handleHoverEnd = (index) => {
+        cards[index].start({ y: "100%" })
+
+    }
     return (
         <div data-scroll data-scroll-section data-scroll-speed="0.1" className='w-full py-20 relative z-20 bg-zinc-900'>
-            <div className=" w-full px-20 pb-10">
+            <div className=" w-full px-8 md:px-20 pb-6 border-b-[0.5px] border-zinc-700">
                 <h1 className='text-6xl font-montreal tracking-tight'>
                     Featured projects
                 </h1>
             </div>
-            <div className="w-full px-20">
+            <div className="w-full px-8 md:px-20">
                 <div className="cards w-full flex flex-wrap justify-center gap-10 mt-10">
-                    <div className="card-container relative  rounded-xl w-[calc(50%_-_20px)] ">
+                    <motion.div className="card-container relative  rounded-xl w-full md:w-[calc(50%_-_20px)] " onHoverStart={() => handleHover(0)}
+                        onHoverEnd={() => handleHoverEnd(0)}>
                         <div className="car-project-title">
                             <h4 className=' relative mb-3 font-montreal font-light uppercase text-[15px] text-zinc-100 before:absolute before:content-[""] before:w-2.5 before:h-2.5 before:bg-zinc-100 before:rounded-full before:left-0 before:top-[7px] ps-5'>
                                 XYZ
                             </h4>
                         </div>
                         <div className="group relative">
-                            <div className="absolute text-[#CDEA68] left-full -translate-x-1/2 -translate-y-1/2 top-1/2 z-20 pointer-events-none">
-                                <h2 className='uppercase text-8xl font-semibold whitespace-nowrap font-grotesk'>
+                            <div className="absolute text-[#CDEA68] left-1/2 md:left-full -translate-x-1/2 -translate-y-1/2 top-1/2 z-20 pointer-events-none overflow-hidden">
+                                <h2 className='uppercase text-8xl font-semibold overflow-hidden whitespace-nowrap font-grotesk'>
                                     {"Project 1".split("").map((item, index) => (
-                                        <span key={index}>{item}</span>
+                                        <motion.span className='inline-block'  initial={{ y: "100%" }} animate={cards[0]} transition={{
+                                            ease: [0.22, 1, 0.36, 1],
+                                            delay: index * 0.05
+                                        }}>{item}</motion.span>
                                     ))}
 
                                 </h2>
@@ -42,19 +55,23 @@ const Projects = () => {
                                 </button>
                             </div>
                         </div>
-                    </div>
+                    </motion.div>
 
-                    <div className="card-container relative  rounded-xl w-[calc(50%_-_20px)] ">
+                    <motion.div className="card-container relative  rounded-xl w-full md:w-[calc(50%_-_20px)] " onHoverStart={() => handleHover(1)}
+                        onHoverEnd={() => handleHoverEnd(1)}>
                         <div className="car-project-title w-full">
                             <h4 className=' relative mb-3 font-montreal font-light uppercase text-[15px] text-zinc-100 before:absolute before:content-[""] before:w-2.5 before:h-2.5 before:bg-zinc-100 before:rounded-full before:left-0 before:top-[7px] ps-5'>
                                 XYZ
                             </h4>
                         </div>
                         <div className="group relative">
-                            <div className="absolute text-[#CDEA68] right-full translate-x-1/2 -translate-y-1/2 top-1/2 z-20 pointer-events-none">
-                                <h2 className='uppercase text-8xl font-semibold whitespace-nowrap font-grotesk'>
+                            <div className="absolute text-[#CDEA68] tight-1/2 md:right-full translate-x-1/2 -translate-y-1/2 top-1/2 z-20 pointer-events-none">
+                                <h2 className='uppercase text-8xl font-semibold overflow-hidden whitespace-nowrap font-grotesk'>
                                     {"Project 1".split("").map((item, index) => (
-                                        <span key={index}>{item}</span>
+                                        <motion.span className='inline-block'  initial={{ y: "100%" }} animate={cards[1]} transition={{
+                                            ease: [0.22, 1, 0.36, 1],
+                                            delay: index * 0.05
+                                        }}>{item}</motion.span>
                                     ))}
 
                                 </h2>
@@ -76,7 +93,7 @@ const Projects = () => {
                                 </button>
                             </div>
                         </div>
-                    </div>
+                    </motion.div>
                 </div>
             </div>
         </div>
