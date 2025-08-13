@@ -1,6 +1,6 @@
 import { useEffect } from 'react'
 import About from './components/About'
-import Cards from './components/cards'
+import Cards from './components/Cards'
 import EyeSection from './components/EyeSection'
 import HeroSection from './components/HeroSection'
 import Marquee from './components/Marquee'
@@ -8,6 +8,7 @@ import Navbar from './components/navbar'
 import Projects from './components/Projects'
 import LocomotiveScroll from 'locomotive-scroll'
 import 'locomotive-scroll/dist/locomotive-scroll.css';
+import Reviews from './components/Reviews'
 function App() {
  useEffect(() => {
     const scroll = new LocomotiveScroll({
@@ -26,8 +27,10 @@ function App() {
       <Marquee />
       <About />
       <EyeSection />
-      <Projects />
+      <Projects /> 
+      <Reviews />
       <Cards />
+     
     </div>
   )
 }

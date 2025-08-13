@@ -3,7 +3,7 @@ import { FaArrowUpLong } from "react-icons/fa6";
 const About = () => {
     const [isHovered, setIsHovered] = useState(false);
     return (
-        <div data-scroll data-scroll-section data-scroll-speed="-.12" className='w-full pt-20 bg-[rgb(205,234,104)] rounded-tl-[30px] rounded-tr-[30px] text-zinc-800 relative z-10'>
+        <div data-scroll data-scroll-section data-scroll-speed="-.12" className='w-full pt-20 bg-[rgb(205,234,104)] rounded-tl-[30px] rounded-tr-[30px] text-zinc-800 relative z-20'>
             <div className="border-b border-b-gray-400">
                 <div className="text-[3.5vw] leading-13 font-normal font-montreal w-full max-w-[1080px] mb-10 px-16">
                     <p>Ochi is a strategic presentation agency for forward-thinking businesses that need to <u>raise funds</u>, <u>sell prod­ucts</u>, <u>ex­plain com</u>­p<u>lex ideas</u>, and <u>hire </u>g<u>reat </u>p<u>eo</u>­p<u>le.</u></p>
