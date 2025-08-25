@@ -9,6 +9,7 @@ import Projects from './components/Projects'
 import LocomotiveScroll from 'locomotive-scroll'
 import 'locomotive-scroll/dist/locomotive-scroll.css';
 import Reviews from './components/Reviews'
+import ScrapbookSection from './components/ScrapbookSection'
 function App() {
  useEffect(() => {
     const scroll = new LocomotiveScroll({
@@ -30,6 +31,7 @@ function App() {
       <Projects /> 
       <Reviews />
       <Cards />
+      {/* <ScrapbookSection /> */}
      
     </div>
   )

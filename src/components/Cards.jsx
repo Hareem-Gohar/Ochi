@@ -1,8 +1,8 @@
 const Cards = () => {
     return (
-        <div className="w-full bg-zinc-900 flex items-center gap-5 px-20 pb-10 border-b  border-zinc-600">
+        <div className="w-full bg-zinc-900 flex items-center flex-wrap gap-5 px-20 pb-10 border-b  border-zinc-600">
             {/* First Card */}
-            <div className="cardContainer h-[50vh] w-1/2">
+            <div className="cardContainer h-[50vh] w-[calc(50%_-_20px)]">
                 <div className="card relative rounded-xl w-full h-full bg-[#004d43]">
                     <div className="cardImage h-full flex justify-center items-center">
                         <img src="https://ochi.design/wp-content/uploads/2022/04/logo001.svg" alt="ochi" />
@@ -22,7 +22,7 @@ const Cards = () => {
             </div>
 
             {/* Second Card */}
-            <div className="cardContainer flex gap-5 h-[50vh] w-1/2">
+            <div className="cardContainer flex gap-5 h-[50vh] w-[calc(50%_-_20px)]">
                 <div className="card rounded-xl relative w-full h-full bg-[#192826]">
                     <div className="cardImagee h-full flex justify-center items-center">
                         <img src="https://ochi.design/wp-content/uploads/2022/04/logo002.svg" alt="clutch" />
